@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  main.summary
+    each article in collections.articles
+      article.summary-article
+        h1.summary-title.article-title
+          a(href='/' + article.path)= article.title
+        small.summary-date.article-date
+          time(datetime=date)= moment(article.date).format('D MMMM YYYY')
+        small!= article.contents.substr(0, 500) + '...'   

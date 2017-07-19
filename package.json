@@ -1,0 +1,43 @@
+{
+  "name": "static-status",
+  "version": "0.3.1",
+  "description": "Codero Status Page",
+  "private": true,
+  "dependencies": {
+    "highlighter": "0.1.0",
+    "metalsmith": "^2.1.0",
+    "metalsmith-autoprefixer": "^1.0.2",
+    "metalsmith-build-date": "^0.2.0",
+    "metalsmith-clean-css": "^5.0.0",
+    "metalsmith-collections": "^0.9.0",
+    "metalsmith-define": "^2.0.1",
+    "metalsmith-drafts": "0.0.1",
+    "metalsmith-each": "^0.1.1",
+    "metalsmith-fingerprint": "^1.0.3",
+    "metalsmith-layouts": "^1.6.5",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-permalinks": "^0.5.0",
+    "metalsmith-redirect": "^2.1.0",
+    "metalsmith-templates": "^0.7.0",
+    "moment": "^2.6.0",
+    "onchange": "^3.0.2",
+    "pug": "^2.0.0-beta4",
+    "serve": "^5.0.0"
+  },
+  "scripts": {
+    "test": "node build.js",
+    "start": "node build.js && serve build -p ${PORT:-8081}",
+    "watch": "onchange -i build.js \"{src,layouts}/**/*\" -- npm run build",
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": null
+  },
+  "author": {
+    "name": "Codero Dev Team",
+    "email": "jmarshall@codero.com",
+    "url": null
+  },
+  "license": "MIT"
+}
