@@ -42,7 +42,7 @@ pre,
 img,
 table,
 blockquote {
-  margin: 0 0 1.5em;
+  margin: 0 0 1em;
 }
 
 ul {
@@ -402,7 +402,7 @@ div.share.cf {
 }
 
 .summary-article {
-  margin: 1.5em 0;
+  margin: 2.5em 0;
 }
 
 .summary-title {
