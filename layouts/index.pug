@@ -7,5 +7,5 @@ block content
         h1.summary-title.article-title
           a(href='/' + article.path)= article.title
         small.summary-date.article-date
-          time(datetime=date)= moment(article.date).format('D MMMM YYYY')
+          time(datetime=date)= moment(article.date).format('MMMM D YYYY')
         small!= article.contents.substr(0, 500) + '...'   

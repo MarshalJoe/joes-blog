@@ -1,5 +1,5 @@
 ---
-title: Advancing the State of Wedding Tech (Node + Twilio)
+title: Advancing the State of Wedding Tech
 date: 2015-11-28 12:00
 author: Joe Marshall
 layout: article.pug

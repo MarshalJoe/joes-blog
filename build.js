@@ -16,8 +16,8 @@ metalsmith(__dirname)
   .source('src')
   .use(define({
     blog: {
-      url: 'https://status.codero.com',
-      title: 'Joe Marshall',
+      url: 'http://joecmarshall.com',
+      title: 'Joe Marshall | Developer * Writer * Researcher ',
       description: 'Developer * Writer * Researcher'
     },
     googleAnalytics: null,

@@ -1,6 +1,6 @@
 ---
 title: 1-Minute Markdown
-date: 2015-08-25 18:18
+date: 2015-04-25 18:18
 author: Joe Marshall
 layout: article.pug
 ---
