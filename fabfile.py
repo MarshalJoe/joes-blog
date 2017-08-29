@@ -8,7 +8,9 @@ import SocketServer
 import webbrowser
 
 def build():
+	print green('Building site...')
 	local('npm run build')
+	print green('Site build complete...')
 
 def preview():
 	local('npm run start')

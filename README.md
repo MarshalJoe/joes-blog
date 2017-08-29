@@ -1,6 +1,6 @@
 # Blog
 
-Joe's blog. 
+[My Blog](http://joecmarshall.com). 
 
 ## Setup
 
