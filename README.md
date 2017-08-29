@@ -66,12 +66,10 @@ To watch for changes and kick off new builds when you're making local edits use 
 fab watch
 ```
 
-## Deploying
-
-Codero-status uses a conventional fabric framework for deploying projects, where the environment is passed in a chain of commands. For example, to deploy to staging (currently on a personal box at http://138.197.125.212) you would enter:
+To deploy to S3
 
 ```
-fab staging deploy
+fab deploy
 ```
 
 

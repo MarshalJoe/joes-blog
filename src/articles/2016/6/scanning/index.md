@@ -5,7 +5,7 @@ author: Joe Marshall
 layout: article.pug
 ---
 
-*Note: This guide assumes you have access to a UNIX terminal like the ones found in Apple and Linux systems.*
+*Originally posted at [bughunting.guide](http://bughunting.guide/simple-automated-scanning-with-arachni/)*.
 
 Scanners have a tricky reputation. Their point-and-click simplicity and utility as automated reconnassiance tools means they get love from script kiddies and professionals alike. They also have compelling use cases for flushing out certain vulnerabilities, like [XSS](http://bughunting.guide/a-gentle-introduction-to-cross-site-scripting-xss/), where there may be too many input vectors or payload varities to feasibly go through the application by hand.
 
