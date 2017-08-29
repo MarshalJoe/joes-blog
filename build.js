@@ -20,7 +20,7 @@ metalsmith(__dirname)
       title: 'Joe Marshall | Developer * Writer * Researcher ',
       description: 'Developer * Writer * Researcher'
     },
-    googleAnalytics: null,
+    googleAnalytics: "UA-105604576-1",
     owner: {
       url: 'http://joecmarshall.com',
       name: 'Joe Marshall'
