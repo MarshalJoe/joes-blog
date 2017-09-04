@@ -20,5 +20,5 @@ def watch():
 
 def deploy():
 	print green('Deploying site...')
-	local('aws s3 cp build s3://joecmarshall/ --recursive')
+	local('aws s3 cp build s3://joecmarshall.com/ --recursive')
 	print green('Site deploy complete.')
