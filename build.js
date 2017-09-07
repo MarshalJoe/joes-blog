@@ -17,8 +17,8 @@ metalsmith(__dirname)
   .use(define({
     blog: {
       url: 'http://joecmarshall.com',
-      title: 'Joe Marshall | Developer * Writer * Researcher ',
-      description: 'Developer * Writer * Researcher'
+      title: 'Joe Marshall | Developer ',
+      description: 'Developer'
     },
     googleAnalytics: "UA-105604576-1",
     owner: {

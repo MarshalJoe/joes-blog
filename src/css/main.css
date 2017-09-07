@@ -363,6 +363,11 @@ table tr:hover td {
   max-width:15em;
 }
 
+.resume-logo {
+  height:auto;
+  max-width: 25px;
+}
+
 .footer {
   padding-top: 1.5em;
   padding-bottom: 1.5em;

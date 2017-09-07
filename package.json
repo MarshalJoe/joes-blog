@@ -26,7 +26,7 @@
   },
   "scripts": {
     "test": "node build.js",
-    "start": "node build.js && serve build -p ${PORT:-8081}",
+    "start": "serve build -p ${PORT:-8081}",
     "watch": "onchange -i build.js \"{src,layouts}/**/*\" -- npm run build",
     "build": "node build.js"
   },
