@@ -5,8 +5,6 @@ author: Joe Marshall
 layout: article.pug
 ---
 
-## South-by Season
-
 It's that time of year, when a product manager's thoughts turn to daydrinking and the streets of Austin are turned into a bacchanalia of technology celebrating the almighty God of the Web — SXSW Interactive!
 
 SXSW has been the launching ground for many web businesses that have gone on to greater success, but none of them can hold a candle to the festival's own true prodigal son, Twitter, a technology that didn't even launch at the event — it actually [debuted 9 months earlier](http://mashable.com/2011/03/05/sxsw-launches/) — but became so popular at the 2008 festival that its rise became indelibly associated with the conference.
