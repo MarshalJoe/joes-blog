@@ -11,7 +11,9 @@ In software coded using functional programming patterns, all functions can be un
 
 For languages built around expressly supporting it, functional programming (FP) can be a powerful tool. [Elixir](https://elixir-lang.org/) uses FP to cleanly execute massively concurrent processes: Because each function returns a value explicitly dependent on the arguments passed to it, with no reference to a global state, no function in an Elixir application "needs to know" anything more than the information already contained in its arguments.
 
-That's one reason Elixir and OTP apps (a popular Elixir application design pattern) scale so well. Executing a function once is the same as executing it a thousand times concurrently, because there's no threat of race conditions or unwanted "[side effects](https://en.wikipedia.org/wiki/Side_effect_(computer_science))", because none of the functions ever share the same state - meaning they never have to depend on order-of-execution or some sort of global reference. As purely FP functions *if they're passed the right arguments, they'll produce the right response*.
+That's one reason Elixir and OTP apps (a popular Elixir application design pattern) scale so well. Executing a function once is the same as executing it a thousand times concurrently, because there's no threat of race conditions or unwanted "[side effects](https://en.wikipedia.org/wiki/Side_effect_(computer_science))", because none of the functions ever share the same state - meaning they never have to depend on order-of-execution or some sort of global reference. 
+
+As purely FP functions *if they're passed consistent arguments, they'll produce a consistent response*.
 
 FP is great in languages that explicitly support it, but it can also be used in languages not necessarily built around the paradigm to reduce complexity and write cleaner code. I'll be implementing a simple example in [Python](https://www.python.org/) even though Python is more of an OOP language, because in certain cases it still makes sense.
 
@@ -76,16 +78,50 @@ def get_movies_by_year(year, page):
 
 ... but this has its own problems. Though we could add logic around the context of the function's execution, pulling out the current page and the total number of pages, iterating up through a loop until we pulled everything we wanted, that would be *ugly*. We want to do all this within the function itself. After all, it has all the information in the `response` object we need to iterate through the necessary pages.
 
-The answer: recursion!
+The answer: recursion! We want the function to keep calling itself and pulling results until it's gone through every page, then we want to return the full (and at this point pretty large) array of `movie_id`s.
 
 ```python
 def get_movies_by_year(year, page):
     movie_ids = []
     discover = tmdb.Discover()
     response = discover.movie(primary_release_year=year, page=page)
+    current_page = response['page']
     for movie in response['results']:
         movie_ids.append(movie['id'])
-    return movie_ids
+    if current_page < response['total_pages']:
+        current_page += 1
+        return get_movies_by_year(year, current_page, movie_ids)
+    else:
+        return movie_ids
 ```
 
+Even without running this code you can probably instantly spot the problem - we're resetting the value of `movie_ids` each time the function is called! This means we're constantly resetting / losing the `movie_ids` pulled from the previous function execution.
 
+So how can we persist the `movie_ids` array we've pulled from the previous execution?
+
+We could:
+- dump it into a separate flat file or database (Imperative)
+- write it to an instance variable of a class (Object-Oriented)
+- pass it as state to the next function execution in the recursive chain of function executions (Functional!)
+
+As the `!` might demonstrate, the final option is the one for us. While we're at it, let's add some sensible defaults, so that we can keep our clean `get_movies_by_year(year)` syntax.
+
+```python
+def get_movies_by_year(year, page=1, movie_ids=[]):
+    discover = tmdb.Discover()
+    response = discover.movie(primary_release_year=year, page=page)
+    current_page = response['page']
+    for movie in response['results']:
+        movie_ids.append(movie['id'])
+    if current_page < response['total_pages']:
+        current_page += 1
+        return get_movies_by_year(year, current_page, movie_ids)
+    else:
+        return movie_ids
+```
+
+By defining the defaults for `page` and `movie_ids` we can ensure that our recursive function chain starts with the correct values, which are then subsequently overwritten by subsequent function calls, passing in and storing state in the form of `current_page` and `movie_ids`.
+
+## Conclusion
+
+I'm writing this code for research purposes but there's still a lot of polishing necessary for it to be put into production. First off, it's a pretty long and time-consuming process. It would also need additional rate-limiting to ensure it doesn't get throttled (TMDB only allows 40 requests per ten second window). But it's still a good example of the small, simple ways functional programming can be employed to reduce boilerplate, state mutations, and the bugs that crop up when functions depend on mutating a global state.
