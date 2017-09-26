@@ -1,6 +1,6 @@
 ---
 title: The Top 5 Burp Suite Extensions
-date: 2017-01-07 17:00
+date: 2015-04-24 17:00
 author: Joe Marshall
 layout: article.pug
 ---
