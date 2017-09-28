@@ -1,6 +1,6 @@
 # Blog
 
-[My Blog](http://joecmarshall.com) is a fork and repurposing of Blake Embrey's original repo, which you can find [here](https://github.com/blakeembrey).
+[My Blog](http://joecmarshall.com) is a fork and repurposing of [Blake Embrey's](https://github.com/blakeembrey) original personal blog repo. He has since migrated his site to [Gatsby](https://www.gatsbyjs.org/).
 
 I am developer and writer with particular interests in Functional Programming, Serverless Architecture, Python, Cybersecurity / Infosec, Literary Criticism, TV, and craft beer. 
 
@@ -16,9 +16,9 @@ You'll also want access to Fabric's `fab` binary to use the deployment system I'
 
 ## Usage
 
-To create a new article, create the corresponding year and month folder under `src/articles`, then create a directory with the post inside of it with an `index.md` markdown file inside it. That directory will be used to construct the full permalink.
+To create a new article, create two nested folders, corresponding to the current year and month under `src/articles`, then create a directory within that named whatever you want your uri to be, with an `index.md` markdown file inside it. That directory will be used to construct the title portion of the full permalink.
 
-So for a blog post written on April 5th, 2017, you would structure the directory like so:
+So for a blog post written on April 5th, 2017, you would structure the directory like this:
 
 ```
 src/articles/2017/4/some-uri/index.md
@@ -69,7 +69,7 @@ And to deploy to S3:
 fab deploy
 ```
 
-To keep credentials out of the source code and keep the code succinct I use Fabric's `local()` function to simply call the [AWS command line interface](https://aws.amazon.com/cli/) present in my local shell for deployment.
+To keep credentials out of the source code and keep the code succinct I use Fabric's `local()` function to simply call the [AWS command line interface](https://aws.amazon.com/cli/) that's present in my local shell in order to deploy.
 
 ## License
 
