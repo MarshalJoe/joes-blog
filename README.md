@@ -73,4 +73,4 @@ To keep credentials out of the source code and keep the code succinct I use Fabr
 
 ## License
 
-MIT
+All code is under the [MIT](https://opensource.org/licenses/MIT) open source license. I reserve the original copyright for all the blog posts and article content.
