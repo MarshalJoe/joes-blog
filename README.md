@@ -18,13 +18,13 @@ You'll also want access to Fabric's `fab` binary to use the deployment system I'
 
 To create a new article, create two nested folders, corresponding to the current year and month under `src/articles`, then create a directory within that named whatever you want your uri to be, with an `index.md` markdown file inside it. That directory will be used to construct the title portion of the full permalink.
 
-So for a blog post written on April 5th, 2017, you would structure the directory like this:
+So for a blog post written in April 2017, you would structure the directory like this:
 
 ```
 src/articles/2017/4/some-uri/index.md
 ```
 
-And that would generate a realtive link to `/articles/2017/4/some-uri/`
+And that would generate a relative link to `/articles/2017/4/some-uri/`
 
 ## Formatting Metadata
 
@@ -41,7 +41,7 @@ layout: article.pug
 some *markdown* content
 ```
 
-Each key-value pair is required.
+Each key-value pair is required for a successful build.
 
 ## Development
 
