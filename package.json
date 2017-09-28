@@ -1,7 +1,7 @@
 {
-  "name": "static-status",
+  "name": "joes-blog",
   "version": "0.3.1",
-  "description": "Codero Status Page",
+  "description": "Joe's Blog",
   "private": true,
   "dependencies": {
     "highlighter": "0.1.0",
@@ -35,9 +35,9 @@
     "url": null
   },
   "author": {
-    "name": "Codero Dev Team",
-    "email": "jmarshall@codero.com",
-    "url": null
+    "name": "Joe Marshall",
+    "email": "",
+    "url": "joecmarshall.com"
   },
   "license": "MIT"
 }

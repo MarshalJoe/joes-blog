@@ -18,7 +18,7 @@ metalsmith(__dirname)
     blog: {
       url: 'http://joecmarshall.com',
       title: 'Joe Marshall | Developer ',
-      description: 'Developer'
+      description: 'Developer, Writer, Human Person'
     },
     googleAnalytics: "UA-105604576-1",
     owner: {

@@ -34,7 +34,7 @@ src/
 					index.md
 ```
 
-And that would generate a realtive link to `/articles/2017/4/some-description/`
+And that would generate a realtive link to `/articles/2017/4/some-uri/`
 
 ## Formatting Metadata
 
