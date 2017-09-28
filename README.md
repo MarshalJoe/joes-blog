@@ -1,16 +1,24 @@
 # Blog
 
-[My Blog](http://joecmarshall.com). 
+[My Blog](http://joecmarshall.com) is a fork and repurposing of Blake Embrey's original repo, which you can find [here](https://github.com/blakeembrey).
+
+I am developer and writer with particular interests in Functional Programming, Serverless Architecture, Python, Cybersecurity / Infosec, Literary Criticism, TV, and craft beer. 
 
 ## Setup
 
+Set up Node dependencies in the usual fashion.
+
 `npm install`
+
+You'll also want access to Fabric's `fab` binary to use the deployment system I've set up here.
+
+`pip install fabric`
 
 ## Usage
 
 To create a new article, create the corresponding year and month folder under `src/articles`, then create a directory with the post inside of it with an `index.md` markdown file inside it. That directory will be used to construct the full permalink.
 
-So for a network outage that occurred on April 5th, 2017, you would structure the directory like so:
+So for a blog post written on April 5th, 2017, you would structure the directory like so:
 
 ```
 src/
@@ -26,9 +34,9 @@ src/
 					index.md
 ```
 
-And that would generate a realtive link to `/articles/2017/4/some-outage-description/`
+And that would generate a realtive link to `/articles/2017/4/some-description/`
 
-## Formatting notifications
+## Formatting Metadata
 
 Your `index.md` should be a YAML file with front-matter key-value pair template variables
 
@@ -42,9 +50,8 @@ layout: article.pug
 
 some *markdown* content
 ```
-Each variable is necessary and must be filled out. The author is not displayed on the site, but kept for internal purposes.
 
-It's also important to include the time in the current format. If a specific time can't be attributed to the incident, please still use a placeholder like `12:00`
+Each key-value pair is required.
 
 ## Development
 
@@ -54,24 +61,25 @@ During development, you can build the blog using `fab build`. This will run `bui
 fab build
 ```
 
-To preview how the static site will be rendered via `localhost`, enter `fab preview`.
+To preview how the static site will be rendered via `localhost`:
 
 ```
 fab preview
 ```
 
-To watch for changes and kick off new builds when you're making local edits use `fab watch`
+To watch for changes and kick off new builds when you're making local edits:
 
 ```
 fab watch
 ```
 
-To deploy to S3
+And to deploy to S3:
 
 ```
 fab deploy
 ```
 
+To keep credentials out of the source code and keep the code succinct I use Fabric's `local()` function to simply call the [AWS command line interface](https://aws.amazon.com/cli/) present in my local shell for deployment.
 
 ## License
 
