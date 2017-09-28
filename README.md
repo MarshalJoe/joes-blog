@@ -21,17 +21,7 @@ To create a new article, create the corresponding year and month folder under `s
 So for a blog post written on April 5th, 2017, you would structure the directory like so:
 
 ```
-src/
-	articles/
-		2015/
-		2016/
-		2017/
-			1/
-			2/
-			3/
-			4/
-				some-uri/
-					index.md
+src/articles/2017/4/some-uri/index.md
 ```
 
 And that would generate a realtive link to `/articles/2017/4/some-uri/`
