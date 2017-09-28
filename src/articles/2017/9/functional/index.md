@@ -23,7 +23,7 @@ Also, I'm a rebel.
 
 I'm currently working on a [Jupyter notebook](http://jupyter.org/) meant for analyzing film data from the past 20 years, as part of the research I'm doing for a pop culture article.
 
-For the function in question, I want to use The Movie Database free API to return all the unique `id`s associated with the films released in a particular year, passing the year as an argument and returning an array of `id`s corresponding to the films released that year. I can then use those `id`s to get more granular information about each movie, like the budget, audience popularity, or casting info.
+For the function in question, I want to use [The Movie Database free API](https://www.themoviedb.org/documentation/api) to return all the unique `id`s associated with the films released in a particular year, passing the year as an argument and returning an array of `id`s corresponding to the films released that year. I can then use those `id`s to get more granular information about each movie, like the budget, audience popularity, or casting info.
 
 ## Setup
 
