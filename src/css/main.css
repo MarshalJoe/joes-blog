@@ -49,14 +49,17 @@ ul {
   padding: 0;
 }
 
-a,
-a:hover,
-.btn {
-  text-decoration: none;
-}
-
 a {
   color: #00A7E1;
+}
+
+.btn, 
+a, 
+a:hover, 
+a:visited, 
+a:link, 
+a:active {
+    text-decoration: none;
 }
 
 .btn {
@@ -372,12 +375,12 @@ table tr:hover td {
   text-align: justify;
 }
 
-.content a:hover {
-  border-bottom: 1px solid;
-}
-
 .content strong {
   font-weight: 500;
+}
+
+.summary {
+  margin-bottom: 2em;
 }
 
 .summary,
@@ -387,8 +390,8 @@ article.content.article {
 }
 
 div.share.cf {
-  margin-top:2.5em;
-  margin-bottom:1.5em;
+  margin-top:4.5em;
+  margin-bottom:3.5em;
   width:100%;
   text-align: center;
 }
