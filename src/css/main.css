@@ -46,10 +46,11 @@ blockquote {
 }
 
 ul {
-  padding: 0 0 0 1.5em;
+  padding: 0;
 }
 
 a,
+a:hover,
 .btn {
   text-decoration: none;
 }
@@ -363,8 +364,7 @@ table tr:hover td {
   max-width:15em;
 }
 
-.article,
-.share {
+.article, {
   margin-bottom: 2em;
 }
 
@@ -387,8 +387,31 @@ article.content.article {
 }
 
 div.share.cf {
+  margin-top:2.5em;
+  margin-bottom:1.5em;
   width:100%;
   text-align: center;
+}
+
+.share ul li {
+  width:25%;
+  display: inline-block;
+}
+
+.share li.email {
+  fill:gray;
+}
+
+.share li.facebook {
+  fill:rgb(59, 89, 152);
+}
+
+.share li.linkedin {
+  fill:rgb(0, 123, 182);
+}
+
+.share li.twitter {
+  fill:rgb(0, 172, 237);
 }
 
 .summary-article {
