@@ -331,7 +331,7 @@ table tr:hover td {
 
 .article-title {
   font-weight: 300;
-  margin: 0 0 0.7em;
+  margin: 1em 0 0.7em;
   line-height: 1.2;
   font-size: 2em;
 }
@@ -367,12 +367,9 @@ table tr:hover td {
   max-width:15em;
 }
 
-.article, {
-  margin-bottom: 2em;
-}
-
 .article {
   text-align: justify;
+  margin-bottom:2em;
 }
 
 .content strong {
@@ -390,8 +387,8 @@ article.content.article {
 }
 
 div.share.cf {
-  margin-top:4.5em;
-  margin-bottom:3.5em;
+  margin-top:2.5em;
+  margin-bottom:1em;
   width:100%;
   text-align: center;
 }
